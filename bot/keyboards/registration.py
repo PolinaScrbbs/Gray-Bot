@@ -5,13 +5,14 @@ from aiogram.types import (
     InlineKeyboardButton,
 )
 
+
 async def status_keyboard(status: enum.Enum):
     keyboard = []
-    
+
     for status_option in status:
         button = InlineKeyboardButton(
             text=status_option.name.capitalize(),
-            callback_data=f"status_{status_option.value.capitalize()}"
+            callback_data=f"status_{status_option.value.capitalize()}",
         )
         keyboard.append([button])
 

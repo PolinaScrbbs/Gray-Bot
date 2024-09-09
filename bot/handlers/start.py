@@ -7,6 +7,7 @@ import bot.keyboards as kb
 
 router = Router()
 
+
 @router.message(CommandStart())
 async def cmd_start(message: Message):
-    await message.answer("Здравствуйте, выберите пункт из меню", reply_markup= kb.start)
+    await message.answer("Здравствуйте, выберите пункт из меню", reply_markup=kb.start)
